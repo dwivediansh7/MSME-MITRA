@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSME Portal - Government of India</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <!-- Background decorative elements -->
+            <div class="bg-decorations">
+                <div class="decoration-circle circle-1"></div>
+                <div class="decoration-circle circle-2"></div>
+                <div class="decoration-circle circle-3"></div>
+                <div class="decoration-circle circle-4"></div>
+                <div class="decoration-circle circle-5"></div>
+                <div class="decoration-circle circle-6"></div>
+                <div class="decoration-icon icon-1"><i class="fas fa-chart-line"></i></div>
+                <div class="decoration-icon icon-2"><i class="fas fa-cogs"></i></div>
+                <div class="decoration-icon icon-3"><i class="fas fa-users"></i></div>
+                <div class="decoration-icon icon-4"><i class="fas fa-handshake"></i></div>
+            </div>
+
+            <!-- Main logo and branding -->
+            <div class="msme-logo">
+                <div class="logo-container">
+                    <div class="handshake-icons">
+                        <i class="fas fa-handshake business-handshake"></i>
+                        <span class="heart-emoji">🤝</span>
+                    </div>
+                    <div class="circular-border"></div>
+                </div>
+                <h1 class="brand-title">MSME MITRA</h1>
+                <p class="brand-subtitle">Your Business Growth Partner</p>
+
+                <div class="govt-badge">
+                    <span class="badge-dots">
+                        <span class="dot green"></span>
+                        <span class="dot orange"></span>
+                    </span>
+                    <span class="badge-text">Government of India</span>
+                </div>
+            </div>
+
+            <div class="welcome-message">
+                <p>Welcome to MSME MITRA!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="app" class="app-container" style="display: none; flex-direction: column;">
+        <!-- Sidebar Backdrop -->
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <i class="fas fa-building"></i>
+                    <span>MSME Portal</span>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search schemes, products, or help...">
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="language-switcher">
+                    <select id="languageSelect">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                    </select>
+                </div>
+                <div class="notifications">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                </div>
+                <div class="smart-tips-control">
+                    <button class="tips-toggle-btn" onclick="window.smartTips?.toggleTips()" title="Toggle Smart Tips">
+                        <i class="fas fa-lightbulb"></i>
+                    </button>
+                    <button class="tips-manager-btn" onclick="window.smartTips?.showTipManager()"
+                        title="Smart Tips Manager">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <div class="profile-avatar">RK</div>
+                    <span class="profile-name">Rajesh Kumar</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-building"></i>
+                    <span>MSME Portal</span>
+                </div>
+                <button class="close-sidebar-btn" id="closeSidebarBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item active">
+                        <a href="#dashboard" class="nav-link" data-page="dashboard">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#verification" class="nav-link" data-page="verification">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Verification</span>
+                            <span class="nav-badge">!</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#marketplace" class="nav-link" data-page="marketplace">
+                            <i class="fas fa-store"></i>
+                            <span>Marketplace</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#erp" class="nav-link" data-page="erp">
+                            <i class="fas fa-chart-line"></i>
+                            <span>ERP Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#crm" class="nav-link" data-page="crm">
+                            <i class="fas fa-users"></i>
+                            <span>CRM Panel</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#schemes" class="nav-link" data-page="schemes">
+                            <i class="fas fa-medal"></i>
+                            <span>Govt Schemes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#business-score" class="nav-link" data-page="business-score">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Business Score</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#learning" class="nav-link" data-page="learning">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Learning Hub</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="help-section">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Need Help?</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div id="page-content" class="page-content">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </main>
+
+        <!-- Notification Toast -->
+        <div id="toast-container" class="toast-container"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        console.log('Loading MSME Portal scripts...');
+    </script>
+    <script src="js/utils.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/smart-tips.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        console.log('All scripts loaded. Portal should initialize now.');
+
+        // Initialize Smart Tips System
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof SmartTipsSystem !== 'undefined') {
+                window.smartTips = new SmartTipsSystem();
+                console.log('Smart Tips System initialized successfully!');
+            }
+        });
+    </script>
+</body>
+
+</html>
